@@ -1,0 +1,109 @@
+1. teriminal me git type karke enter karenge to git ki sabhi commands aa jaayegi 
+2. git configuring - means git me apni information store karwana , iske liye hum command use lete hai git config --global user.name "AKshay haritwal" for user name , email ke liye likhenge = git config --global user.email"theakshaychoudhary1@gmail.com"
+git config --list se ye sabhi details humre pass print hoke aa jaayegi 
+
+iske baad hum vs code me jaayenge yaha folder create kar liya hai git demo naam se , ab yaha hum jab bottom left me option hai waha click karenge to humare liye ek alag window open hogi yaha ek option hai terminal , iss terminal me hum wo saari command use kar sakte hai jo hum gitbash me use kar rahe the + hum yaha apne git ko bhi access  kar sakte hai 
+
+# git basic commands -------------->
+
+1. clone - agar humne github pe koi repostry bana rakhi hai and usko hum apne computer me save karna chate hai to uske liye clone command ko use karte hai iske liye command hai ==> git clone then respostry link , repostry ka link copy karne ke liye repostry pe jaaye then code pe click kare then https wala link copy kar le , ab jaha hume ye clone save karvana hai uss folder pe jaayenge then waha ye code run karenge  example - git clone https://github.com/AkshayHaritwal/mini-project.git 
+
+ab hum readme.md wali file me changes kar sakte and new file create kar sakte hai jese hi changes kar ke save karenge to files yellow ho jaayegi and aage M likha hua aayega this shows humne file ko modfify kar diya hai 
+
+2. agar hum new file create karenge  to wo untracked file hogi like yaha humne index.html and style.css new file banayi hai so ye untracked file hai and jo readme.md file hai wo modified file hai untracked file ke aage U likha hua aayega and modified ke aage M
+
+3. status  - command ki help se abhi folder ka kya status chal raha hai wo check kar sakte hai iske liye sabse pahle delta_demo file pe jaayenge then ye command run karenge ,  command ==> git status .
+
+4. yaha humne new file bana li hai ek file ko modify kar liya hai ab inko commit karne ke liye sabse pahle inhe add karna hoga then commit 
+
+5. add - add karne ke liye command ==> git add file name 
+example - git add index.html              so yaha index.html add ho jaayegi and ab hum agar git status check kare to wha index.html ka status hoga staged ab sirf isse commit karna baaki hai 
+agar sabhi files ko eksath add karna hai to uske liye command => git add .
+
+6. commit = isse sabhi changes submit ho jaayenge , command => git commit -m " meanigful message" 
+
+ab ye changes yaha to sucessfully commit ho gaye hai lekin github pe nahi huye hai agar hum wha bhi karna chate hai to uske liye push command ko use karenge 
+
+7. push = used to add changes to github , command => git push origin main
+
+
+
+
+# creating repositry in local system -------->
+
+1. sabse pahle yaha ek new folder create kar liya hai project2 naam se 
+2. then ab hum  yaha init command ki help se git repositry create karenge local system me , iske liye sabse pahle jis folder me  repostry create karni hai uspe jaayenge then wha git init command ko use karenge isse uss folder me ek empty repostry create ho jaayegi , command ==> git init 
+
+3. iske baad humne project 2 folder me index.html and README.md file bana li hai 
+ab in dono files ko add kar lenege use add command , then commit , files sucessfully commit ho jaayegi 
+
+4. ab hum iss local system wali git repositry ko github pe push karenge 
+
+5. iske liye github pe ek new repositry create karenge without discription and README.md file 
+
+6. ab hum iss repositry ka https link copy karenge then terminal me command run karenge git remote add origin then link paste kar denge isse github wali repositry local system wali repositry se jud gayi hai , command ==> git remote add origin https://github.com/AkshayHaritwal/project2.git
+
+7. ab remote sahi se set ho gaya hai ya nahi isko verify karne ke liye command ==> remote -v  
+
+8. git ki branch check karne ke liye command hai ==> git branch 
+agar hum branch ka name change karna chate hai to command hai => git branch -m branch_name
+
+9. ab hum git push origin main command run karke local repo wale code ko github wali repo me push kar denge .
+
+10. ab agar hum or changes karna chate hai to same wese hii kar sakte hai jese basic command wale section me kiya thaa
+
+11. agar hum ek baar git push -u origin main command run kar de to jab bhi iss file me kuch changes karke hum push karenge to usme git push origin main ki jagah simply git push likh sakte hai 
+
+
+# branch commands -------------->
+
+
+1. git ki branch check karne ke liye command hai ==> git branch 
+2. agar hum branch ka name change karna chate hai to command hai => git branch -m branch_name
+3. git checkout - is used to navigate , yaani ek branch se dusri branch me jaana command ==> git checkout branch_name
+4. new branch banane ke liye command hai ==> git checkout -b new_branchname , iske liye project2 pe jaayenge then wha ye command run karenge 
+5. delete branch - branch delete karne ke liye command hai ==> git checkout -d branchname , hume uss branch me nahi hona chaiye jise delte karna hai 
+
+# murging branches ----------------->
+
+so ab humne yaha app.js naame se new file bana li hai ab hum features branch pe switch karenge then app.js isko add and commit kar denge . commit karne ke baad ise features branch me push karenge iske liye command hai ==> git push origin features
+
+ab agar hum github pe project2 pe jaayenge to wha branches me show hoga 2 branches ek main branch and 2nd features branch , ab humne jo app.jss file thii usse features branch me push kiya isliye wo features branch me hi show hogi 
+
+ab agar hume ye pata karna hai ki features branch and main branch me kya kya differences hai to uske liye command hai ==> git diff branchname , example - git diff main                , iske liye sabse pahle features brnach pe switch karenge then ye command 
+
+to merge branches --> command ==> git merge branch_name  , example - git merge main 
+
+branches ko merge karne ka ek or tarika ye hai ki jab hum features branch ko push karenge tab github pe ek option show hoga compare&pullrequest ispe click karna hai , jese hii click karenge to ek pull request open ho jaayegi , yaha show hoga ki hum features branch ko main branch me merge kar rahe hai , iske baad hum message box me message likhenge and comment me comment  , then create pull request pe click karenge, then merge pull request pe click karenge , then confirm merge pe click karenge to branch sucessfully merge ho jaayegi . ab agar hum main branch pe jaaye to wha app.js show hogi . ab ye merge wale changes sirf github pe huye hai local system me nahi agar hum in changes ko local system me pe apply karna chate hai to pull command ko use karenge
+
+pull command = git pull origin main 
+
+
+# merge conflit ------------->
+
+agar humne features branch and main branch me same file me same jagah change kar diya to git ko samaj nahi aayega ki konsa change lena hai so isse conflit arrise ho jaayega 
+
+ab conflit arise karne ke liye hum feature branch pe switch karenge then app.js me change kar denge iske baad , app.js modified file ban jaayegi so isko hum add and commit kar denge 
+iske baad main branch pe switch karenge then app.js me change kar denge iske baad , app.js modified file ban jaayegi so isko hum add and commit kar denge 
+
+ab hum main branch pe switch karenge then merge command use karenge - git merge features , jese hii merge karenge to conflit show kar dega inn conflit ko hume app.js me jaake solve karna hai , solve karne ke liye agar accept current change pe click kare to main branch wale changes accept ho jaayenge , accept incoming changes  pe click kare to features branch wale changes accept ho jaayenge  ya accept both changes pe click kare to dono changes accept ho jaayenge
+ab app.js me fir se change ho gaya so hume iss phir se add and commit karna hoga , then uske baad merge command run karenge to dono file merge ho jaayegi then hum push kar denge to origin main 
+
+# fixing mistakes ----------------------->
+
+agar humne galti se aise changes ko add kar diya hai jo hume chaiye hii nahi to unhe unadd karne ke liye command hai ==> git reset file_name     , isse single file ka unadd hoga  and agar humne git add . command ka use karke multiple file ko add kar diya thaa to un sabko unadd karne ka command hai ==> git reset 
+
+agar humne galti se kuch commit kar diya hai to usko reset karne ke liye command hai ==> git reset HEAD~1          , isse recent wala single commit reset ho jaayega 
+
+ab agar hume recent wale multiple commits ko reset karna hai to uske liye command hai ==> git reset #code 
+agar hum teriminal me git log likhenge to ye hume uss branch me humne kon kon se commit kar rakhee hai wo show kar dega , sabhi commits ke saamne unka # code  hota hai hum jis bhi #code ko git reset wali command me paste kar denge uske aage ke commit reset ho jaayenge  , git log wali window se bahar aane ke liye q press kare 
+
+ab commit to reset ho gaye lekin wo changes abhi bhi app.js me dikh rahe hai agar inhe bhi hatana hai to #code ke aage --hard likh denge 
+command==> git reset --hard #code 
+
+
+# forking ---------------->
+
+agar hume kisi dusre github user ki repositry me contribute karna hai to uske liye sabse pahle us repositry pe jaayenge jisme contribute karna chate hai then wha ek fork ka option hai uspe click karna hai , then humre pass respostry ka name select karne ka option aayega , uske baad hum fork pe click karenge to uss user wali respostry ka pura code humari respostry me copy ho jaayega , ab humare pass complete code aa jaayega isme hum changes kar sakte hai , then changes ko commit kar sakte hai and pull request create karke unn changes ko main brach me merge kar sakte hai 
+
+
