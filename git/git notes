@@ -62,7 +62,7 @@ agar hum branch ka name change karna chate hai to command hai => git branch -m b
 2. agar hum branch ka name change karna chate hai to command hai => git branch -m branch_name
 3. git checkout - is used to navigate , yaani ek branch se dusri branch me jaana command ==> git checkout branch_name
 4. new branch banane ke liye command hai ==> git checkout -b new_branchname , iske liye project2 pe jaayenge then wha ye command run karenge 
-5. delete branch - branch delete karne ke liye command hai ==> git checkout -d branchname , hume uss branch me nahi hona chaiye jise delte karna hai 
+5. delete branch - branch delete karne ke liye command hai ==> git branch -d branchname , hume uss branch me nahi hona chaiye jise delte karna hai 
 
 # murging branches ----------------->
 
